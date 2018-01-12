@@ -11,31 +11,31 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button  act_change;
-//    private MediaPlayer changeSound;
+    private MediaPlayer changeSound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addListenerOnButton();
-//        imageClic();
+        imageClic();
 
-//        changeSound = MediaPlayer.create(this, R.raw.bystraya);
-//    }
+        changeSound = MediaPlayer.create(this, R.raw.bystraya);
+    }
 
-//    public void imageClic () {
-//        act_change.setOnClickListener(
-//                new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        soundPlay(changeSound);
-//
-//                    }
-//                }
-//        );
-//    }
-//    public void soundPlay (MediaPlayer sound){
-//        sound.start();
+    public void imageClic () {
+        act_change.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        soundPlay(changeSound);
+
+                    }
+                }
+        );
+    }
+    public void soundPlay (MediaPlayer sound){
+        sound.start();
     }
 
     public void addListenerOnButton () {
