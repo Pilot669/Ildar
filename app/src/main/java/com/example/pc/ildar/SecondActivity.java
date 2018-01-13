@@ -1,43 +1,51 @@
 package com.example.pc.ildar;
 
-import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
+
 
 public class SecondActivity extends AppCompatActivity {
 
-
-    //    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        ImageView imageView = new ImageView(this);
-//        imageView.setImageResource(R.drawable.happi);
-//        setContentView(imageView);
-//    }
-//}
-
-
-
-
-
-    private ImageView ing1, ing2;
-    private TextView text1;
+    private ImageView ing1, inr2;
+    private MediaPlayer ing1Sound, ing2Sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.OnCreate(savedInstanceState);
-        ImageView(R.drawable.activity_main);
-        happi();
+        super.onCreate(savedInstanceState);
+
+        ing1 = (ImageView)findViewById(R.id.happi1);
+        inr2 = (ImageView)findViewById(R.id.happi2);
+
+        ing1Sound = MediaPlayer.create(this, R.raw.bystraya);
+        ing2Sound = MediaPlayer.create(this, R.raw.happi2);
+
+        imageClick ();
     }
 
-    public void happi() {
+    public void imageClick () {
+       ing1.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        soundPlay (ing1Sound);
+                    }
+                }
+        );
 
-        ing1 = (ImageView) findViewById(R.id.happi1);
-        text1 = (TextView) findViewById(R.id.text);
-        ing2 = (ImageView) findViewById(R.id.happi2);
-
+       inr2.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        soundPlay (ing2Sound);
+                    }
+                }
+        );
     }
+
+    public void soundPlay (MediaPlayer sound) { sound.start(); }
+
 }
+
