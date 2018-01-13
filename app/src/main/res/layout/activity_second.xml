@@ -14,14 +14,26 @@
         <ImageView
             android:id="@+id/happi1"
             android:layout_width="match_parent"
-            android:layout_height="299dp"
+            android:layout_height="157dp"
             app:srcCompat="@drawable/happi" />
 
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="242dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:text="Желаю в жизни только счастья, Удачи, смеха, радости, тепла! Пусть стороной обходят все ненастья, А рядом будут добрые друзья!  Желаю, чтоб мечты твои сбывались, Здоровье чтоб не подводило никогда, И, как стремительно года б твои ни мчались, Ты оставайся молодым всегда-всегда!"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/happi2"
             android:layout_width="match_parent"
-            android:layout_height="261dp"
+            android:layout_height="160dp"
             app:srcCompat="@drawable/images" />
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
