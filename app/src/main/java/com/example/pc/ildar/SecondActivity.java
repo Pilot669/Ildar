@@ -15,6 +15,7 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
 
         ing1 = (ImageView)findViewById(R.id.happi1);
         inr2 = (ImageView)findViewById(R.id.happi2);
